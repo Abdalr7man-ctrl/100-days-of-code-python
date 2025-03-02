@@ -1,3 +1,4 @@
+from art import *
 import random 
 
 word_list=('ant baboon badger bat bear beaver camel cat clam cobra cougar '
@@ -64,6 +65,7 @@ HANGMANPICS = ['''
 
 life=6
 counter=0
+print(logo3)
 print("-"*len(chosen_word))
 
 while True :
@@ -91,12 +93,11 @@ while True :
     
     print(f"******you still have {life} tries.******")
 
-    print(HANGMANPICS[counter]+"\n\n\n\n\n\n")
+    print(HANGMANPICS[counter])
 
     if not "-" in unknow_word :
-        print("you win You saved a man's life man!! :)")
+        print(logo2)
         break
     elif life == 0: 
         print("you lose :(")
         break
-
