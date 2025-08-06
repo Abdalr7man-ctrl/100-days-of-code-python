@@ -26,14 +26,11 @@ def asking_drink():
 
     if drink in ["espresso", "latte", "cappuccino"]:
         return drink
-
     elif drink == "off":
         return False
-
     elif drink == "report":
         report()
         return asking_drink()
-
     else:
         print("Invalid input.")
         return asking_drink()
@@ -51,7 +48,6 @@ def choose():
     ingredients = MENU.get(choice).get("ingredients")
 
     for item in ingredients:
-
         if ingredients[item] > resources[item]:
             print(f"\nSorry there is not enough {item}.\n")
             return choose()
